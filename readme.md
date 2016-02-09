@@ -1,0 +1,1 @@
+More information http://embt.co/sprint-effects
