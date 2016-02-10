@@ -3,9 +3,6 @@
         <ProjectGuid>{A1FE94F1-B3B9-462D-B53A-A514F1DF8CB4}</ProjectGuid>
     </PropertyGroup>
     <ItemGroup>
-        <Projects Include="..\..\..\..\..\..\Public\Documents\Embarcadero\Studio\17.0\Samples\Object Pascal\Multi-Device Samples\User Interface\ShaderFilters\ShaderFilters.dproj">
-            <Dependencies/>
-        </Projects>
         <Projects Include="AnimationSample.dproj">
             <Dependencies/>
         </Projects>
@@ -13,6 +10,9 @@
             <Dependencies/>
         </Projects>
         <Projects Include="TransitionSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Delphi\PageTurn\PageTurnSample.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -23,15 +23,6 @@
             <Default.Personality/>
         </BorlandProject>
     </ProjectExtensions>
-    <Target Name="ShaderFilters">
-        <MSBuild Projects="..\..\..\..\..\..\Public\Documents\Embarcadero\Studio\17.0\Samples\Object Pascal\Multi-Device Samples\User Interface\ShaderFilters\ShaderFilters.dproj"/>
-    </Target>
-    <Target Name="ShaderFilters:Clean">
-        <MSBuild Projects="..\..\..\..\..\..\Public\Documents\Embarcadero\Studio\17.0\Samples\Object Pascal\Multi-Device Samples\User Interface\ShaderFilters\ShaderFilters.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="ShaderFilters:Make">
-        <MSBuild Projects="..\..\..\..\..\..\Public\Documents\Embarcadero\Studio\17.0\Samples\Object Pascal\Multi-Device Samples\User Interface\ShaderFilters\ShaderFilters.dproj" Targets="Make"/>
-    </Target>
     <Target Name="AnimationSample">
         <MSBuild Projects="AnimationSample.dproj"/>
     </Target>
@@ -59,14 +50,23 @@
     <Target Name="TransitionSample:Make">
         <MSBuild Projects="TransitionSample.dproj" Targets="Make"/>
     </Target>
+    <Target Name="PageTurnSample">
+        <MSBuild Projects="Delphi\PageTurn\PageTurnSample.dproj"/>
+    </Target>
+    <Target Name="PageTurnSample:Clean">
+        <MSBuild Projects="Delphi\PageTurn\PageTurnSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PageTurnSample:Make">
+        <MSBuild Projects="Delphi\PageTurn\PageTurnSample.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="ShaderFilters;AnimationSample;EffectSample;TransitionSample"/>
+        <CallTarget Targets="AnimationSample;EffectSample;TransitionSample;PageTurnSample"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="ShaderFilters:Clean;AnimationSample:Clean;EffectSample:Clean;TransitionSample:Clean"/>
+        <CallTarget Targets="AnimationSample:Clean;EffectSample:Clean;TransitionSample:Clean;PageTurnSample:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="ShaderFilters:Make;AnimationSample:Make;EffectSample:Make;TransitionSample:Make"/>
+        <CallTarget Targets="AnimationSample:Make;EffectSample:Make;TransitionSample:Make;PageTurnSample:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
