@@ -2,8 +2,8 @@ object PageTurnSampleForm: TPageTurnSampleForm
   Left = 0
   Top = 0
   Caption = 'Page Turn Sample'
-  ClientHeight = 483
-  ClientWidth = 665
+  ClientHeight = 500
+  ClientWidth = 600
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
@@ -40,8 +40,8 @@ object PageTurnSampleForm: TPageTurnSampleForm
   end
   object LayoutVirtual: TLayout
     Align = Contents
-    Size.Width = 665.000000000000000000
-    Size.Height = 483.000000000000000000
+    Size.Width = 600.000000000000000000
+    Size.Height = 500.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 1
     object Memo3: TMemo
@@ -74,22 +74,39 @@ object PageTurnSampleForm: TPageTurnSampleForm
   end
   object LayoutVisible: TLayout
     Align = Contents
-    Size.Width = 665.000000000000000000
-    Size.Height = 483.000000000000000000
+    Size.Width = 600.000000000000000000
+    Size.Height = 500.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
     object Memo1: TMemo
       Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
       DataDetectorTypes = []
+      Lines.Strings = (
+        
+          'There are two visible memos on a layout. That layout has a TSwip' +
+          'eTransitionEffect. Over both memos is another Layout with HitTes' +
+          't = True to catch all the mouse events and drive the animation.'
+        ''
+        'Behind that memo is another Layout with two more memos on it.'
+        ''
+        
+          'The Target and Back bitmaps for the TSwipeTransitionEffect are m' +
+          'ade from the layout in the back, but is flipped horizontaly for ' +
+          'the background image.'
+        ''
+        
+          'To finish the page turn animation a TSelectPoint has a TPathAnim' +
+          'ation that is tied to the MousePoint on the TSwipeTransitionEffe' +
+          'ct.')
       ReadOnly = True
       ShowScrollBars = False
       TextSettings.WordWrap = True
-      Size.Width = 333.000000000000000000
-      Size.Height = 481.000000000000000000
+      Size.Width = 273.000000000000000000
+      Size.Height = 497.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
-      Viewport.Width = 329.000000000000000000
-      Viewport.Height = 477.000000000000000000
+      Viewport.Width = 269.000000000000000000
+      Viewport.Height = 493.000000000000000000
     end
     object Memo2: TMemo
       Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
@@ -97,13 +114,13 @@ object PageTurnSampleForm: TPageTurnSampleForm
       ReadOnly = True
       ShowScrollBars = False
       TextSettings.WordWrap = True
-      Position.X = 332.000000000000000000
-      Size.Width = 333.000000000000000000
-      Size.Height = 481.000000000000000000
+      Position.X = 272.000000000000000000
+      Size.Width = 393.000000000000000000
+      Size.Height = 497.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1
-      Viewport.Width = 329.000000000000000000
-      Viewport.Height = 477.000000000000000000
+      Viewport.Width = 389.000000000000000000
+      Viewport.Height = 493.000000000000000000
     end
     object Swipe: TSwipeTransitionEffect
       Enabled = False
@@ -112,8 +129,8 @@ object PageTurnSampleForm: TPageTurnSampleForm
     object LayoutGlass: TLayout
       Align = Contents
       HitTest = True
-      Size.Width = 665.000000000000000000
-      Size.Height = 483.000000000000000000
+      Size.Width = 600.000000000000000000
+      Size.Height = 500.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 2
       OnMouseDown = LayoutGlassMouseDown
@@ -146,14 +163,14 @@ object PageTurnSampleForm: TPageTurnSampleForm
         ReadOnly = False
       end>
     ScopeMappings = <>
-    Left = 256
-    Top = 224
+    Left = 408
+    Top = 216
   end
   object BindingsList1: TBindingsList
     Methods = <>
     OutputConverters = <>
-    Left = 20
-    Top = 5
+    Left = 408
+    Top = 165
     object LinkControlToFieldLoremIpsum1: TLinkControlToField
       Category = 'Quick Bindings'
       DataSource = PrototypeBindSource1

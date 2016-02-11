@@ -81,7 +81,6 @@ procedure TForm27.FormCreate(Sender: TObject);
 begin
   TabControl1.ActiveTab := TabItem2;
   TabControl1.ActiveTab := TabItem1;
-
 end;
 
 initialization

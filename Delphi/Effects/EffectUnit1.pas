@@ -26,6 +26,7 @@ type
     LinkControlToPropertyVisible: TLinkControlToProperty;
     procedure Layout2MouseMove(Sender: TObject; Shift: TShiftState; X,
       Y: Single);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -38,6 +39,11 @@ var
 implementation
 
 {$R *.fmx}
+
+procedure TForm30.FormCreate(Sender: TObject);
+begin
+  Layout2.Visible := True;
+end;
 
 procedure TForm30.Layout2MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Single);

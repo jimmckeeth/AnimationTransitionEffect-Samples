@@ -1,0 +1,120 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{A1FE94F1-B3B9-462D-B53A-A514F1DF8CB4}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Delphi\Animations\AnimationSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Delphi\Effects\EffectSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Delphi\Transitions\TransitionSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Delphi\PageTurn\PageTurnSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="CPP\Animations\AnimationsCppSample.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="CPP\Effects\EffectsSampleCpp.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="CPP\Transitions\TransitionsSampleCpp.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="CPP\PageTurns\PageTurnCppSample.cbproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="AnimationSample">
+        <MSBuild Projects="Delphi\Animations\AnimationSample.dproj"/>
+    </Target>
+    <Target Name="AnimationSample:Clean">
+        <MSBuild Projects="Delphi\Animations\AnimationSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AnimationSample:Make">
+        <MSBuild Projects="Delphi\Animations\AnimationSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="EffectSample">
+        <MSBuild Projects="Delphi\Effects\EffectSample.dproj"/>
+    </Target>
+    <Target Name="EffectSample:Clean">
+        <MSBuild Projects="Delphi\Effects\EffectSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="EffectSample:Make">
+        <MSBuild Projects="Delphi\Effects\EffectSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TransitionSample">
+        <MSBuild Projects="Delphi\Transitions\TransitionSample.dproj"/>
+    </Target>
+    <Target Name="TransitionSample:Clean">
+        <MSBuild Projects="Delphi\Transitions\TransitionSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TransitionSample:Make">
+        <MSBuild Projects="Delphi\Transitions\TransitionSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PageTurnSample">
+        <MSBuild Projects="Delphi\PageTurn\PageTurnSample.dproj"/>
+    </Target>
+    <Target Name="PageTurnSample:Clean">
+        <MSBuild Projects="Delphi\PageTurn\PageTurnSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PageTurnSample:Make">
+        <MSBuild Projects="Delphi\PageTurn\PageTurnSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="AnimationsCppSample">
+        <MSBuild Projects="CPP\Animations\AnimationsCppSample.cbproj"/>
+    </Target>
+    <Target Name="AnimationsCppSample:Clean">
+        <MSBuild Projects="CPP\Animations\AnimationsCppSample.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AnimationsCppSample:Make">
+        <MSBuild Projects="CPP\Animations\AnimationsCppSample.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="EffectsSampleCpp">
+        <MSBuild Projects="CPP\Effects\EffectsSampleCpp.cbproj"/>
+    </Target>
+    <Target Name="EffectsSampleCpp:Clean">
+        <MSBuild Projects="CPP\Effects\EffectsSampleCpp.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="EffectsSampleCpp:Make">
+        <MSBuild Projects="CPP\Effects\EffectsSampleCpp.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="TransitionsSampleCpp">
+        <MSBuild Projects="CPP\Transitions\TransitionsSampleCpp.cbproj"/>
+    </Target>
+    <Target Name="TransitionsSampleCpp:Clean">
+        <MSBuild Projects="CPP\Transitions\TransitionsSampleCpp.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TransitionsSampleCpp:Make">
+        <MSBuild Projects="CPP\Transitions\TransitionsSampleCpp.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="PageTurnCppSample">
+        <MSBuild Projects="CPP\PageTurns\PageTurnCppSample.cbproj"/>
+    </Target>
+    <Target Name="PageTurnCppSample:Clean">
+        <MSBuild Projects="CPP\PageTurns\PageTurnCppSample.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PageTurnCppSample:Make">
+        <MSBuild Projects="CPP\PageTurns\PageTurnCppSample.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="AnimationSample;EffectSample;TransitionSample;PageTurnSample;AnimationsCppSample;EffectsSampleCpp;TransitionsSampleCpp;PageTurnCppSample"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="AnimationSample:Clean;EffectSample:Clean;TransitionSample:Clean;PageTurnSample:Clean;AnimationsCppSample:Clean;EffectsSampleCpp:Clean;TransitionsSampleCpp:Clean;PageTurnCppSample:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="AnimationSample:Make;EffectSample:Make;TransitionSample:Make;PageTurnSample:Make;AnimationsCppSample:Make;EffectsSampleCpp:Make;TransitionsSampleCpp:Make;PageTurnCppSample:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
