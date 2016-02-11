@@ -88,13 +88,11 @@ void __fastcall TPageFlipform::LayoutGlassMouseDown(TObject *Sender, TMouseButto
 
 	Swipe->MousePoint = PointF(X, Y);
 	Swipe->Enabled = true;
-	LayoutVirtual->BringToFront();
 	vmemo = LayoutVirtual->MakeScreenshot();
 	Swipe->Target->Assign(vmemo);
 	vmemo->FlipHorizontal();
 	Swipe->Back->Assign(vmemo);
 	vmemo->Free();
-	LayoutVisible->BringToFront();
 }
 //---------------------------------------------------------------------------
 

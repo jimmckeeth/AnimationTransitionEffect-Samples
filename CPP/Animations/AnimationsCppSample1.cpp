@@ -24,7 +24,7 @@ void __fastcall TForm7::Button2Click(TObject *Sender)
 void __fastcall TForm7::Rectangle1Click(TObject *Sender)
 {
 	Rectangle1->RotationAngle = 0;
-	Fmx::Ani::TAnimator::AnimateFloat(Rectangle1, "RotationAngle", 90, 2);
+	Fmx::Ani::TAnimator::AnimateFloat(Rectangle1, "RotationAngle", 90, 1);
 }
 //---------------------------------------------------------------------------
 

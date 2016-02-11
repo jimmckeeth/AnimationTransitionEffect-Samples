@@ -78,7 +78,7 @@ object Form7: TForm7
     Size.PlatformDefault = False
     OnClick = Rectangle1Click
     object ColorAnimation1: TColorAnimation
-      Duration = 0.200000002980232200
+      Duration = 1.000000000000000000
       PropertyName = 'Fill.Color'
       StartValue = claWhite
       StartFromCurrent = True
@@ -87,7 +87,7 @@ object Form7: TForm7
     end
   end
   object ColorPanel1: TColorPanel
-    Color = claLightslategray
+    Color = claWhite
     Position.X = 464.000000000000000000
     Position.Y = 128.000000000000000000
     Size.Width = 150.000000000000000000
@@ -98,8 +98,8 @@ object Form7: TForm7
   object BindingsList1: TBindingsList
     Methods = <>
     OutputConverters = <>
-    Left = 20
-    Top = 5
+    Left = 140
+    Top = 237
     object LinkControlToPropertyStopValue: TLinkControlToProperty
       Category = 'Quick Bindings'
       Control = ColorPanel1
