@@ -94,18 +94,6 @@ object Form7: TForm7
     Size.Height = 150.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 3
-  end
-  object BindingsList1: TBindingsList
-    Methods = <>
-    OutputConverters = <>
-    Left = 140
-    Top = 237
-    object LinkControlToPropertyStopValue: TLinkControlToProperty
-      Category = 'Quick Bindings'
-      Control = ColorPanel1
-      Track = False
-      Component = ColorAnimation1
-      ComponentProperty = 'StopValue'
-    end
+    OnChange = ColorPanel1Change
   end
 end

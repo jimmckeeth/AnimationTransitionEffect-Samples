@@ -27,3 +27,10 @@ void __fastcall TForm17::FormCreate(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TForm17::CheckBox2Change(TObject *Sender)
+{
+  Layout2->Visible = CheckBox2->IsChecked;
+  SmoothMagnifyEffect1->Enabled = CheckBox2->IsChecked;
+}
+//---------------------------------------------------------------------------
+

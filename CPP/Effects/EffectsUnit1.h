@@ -33,11 +33,9 @@ __published:	// IDE-managed Components
 	TShadowEffect *ShadowEffect1;
 	TLayout *Layout2;
 	TCheckBox *CheckBox2;
-	TBindingsList *BindingsList1;
-	TLinkControlToProperty *LinkControlToPropertyEnabled;
-	TLinkControlToProperty *LinkControlToPropertyVisible;
 	void __fastcall Layout2MouseMove(TObject *Sender, TShiftState Shift, float X, float Y);
 	void __fastcall FormCreate(TObject *Sender);
+	void __fastcall CheckBox2Change(TObject *Sender);
 
 private:	// User declarations
 public:		// User declarations

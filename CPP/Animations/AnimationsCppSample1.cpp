@@ -35,3 +35,9 @@ void __fastcall TForm7::FormCreate(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TForm7::ColorPanel1Change(TObject *Sender)
+{
+  ColorAnimation1->StopValue = ColorPanel1->Color;
+}
+//---------------------------------------------------------------------------
+

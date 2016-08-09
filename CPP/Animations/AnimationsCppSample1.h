@@ -32,13 +32,12 @@ __published:	// IDE-managed Components
 	TFloatAnimation *FloatAnimation4;
 	TButton *Button2;
 	TRectangle *Rectangle1;
-	TColorPanel *ColorPanel1;
 	TColorAnimation *ColorAnimation1;
-	TBindingsList *BindingsList1;
-	TLinkControlToProperty *LinkControlToPropertyStopValue;
+	TColorPanel *ColorPanel1;
 	void __fastcall Button2Click(TObject *Sender);
 	void __fastcall Rectangle1Click(TObject *Sender);
 	void __fastcall FormCreate(TObject *Sender);
+	void __fastcall ColorPanel1Change(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm7(TComponent* Owner);
